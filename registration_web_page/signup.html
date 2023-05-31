@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Signup</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+   </head>
+   <body>
+      <div class="mainheader">
+      <div class="login-form" style="border:solid 1.5px black;background-color: black;border-radius: 10px;">
+         <!-- <img src="logo1.png" alt="image"  class="center" style="display: block;margin-left: auto;margin-right: auto;width: 30%;height: 60%">-->
+         <div class="text">
+            SIGNUP
+         </div>
+         <form method="post" action="account.php">
+            <div class="field">
+               <div class="fas fa-user-alt"></div>
+               <input id = "name" type="text" name = "username" placeholder="Username">
+            </div>
+            <div class="field">
+               <div class="fas fa-envelope"></div>
+               <input id = "email" type="email" name = "email" placeholder="Email">
+            </div>
+            <div class="field">
+               <div class="fas fa-lock"></div>
+               <input id = "password" type="password" name = "password" placeholder="Password">
+            </div>
+            <button name = "signup">SIGNUP</button>
+            <div class="link">
+               Already a user?
+               <a href="login.html">Click here to login</a>
+            </div>
+         </form>
+         <script>
+            window.onload = function () {
+            document.forms[0].onsubmit = function () {
+               var username = this.elements[0].value;
+                if (username == "") {
+                    alert("Please enter Username");
+                    return false;
+                }
+                var email = this.elements[1].value;
+                if (email == "") {
+                    alert("Please enter Email-Id");
+                    return false;
+                }
+                var password = this.elements[2].value;
+                if (password == "") { 
+                    alert("Please enter the password");
+                    return false;
+                }
+                return true;
+            }
+        }
+         </script>
+      </div>
+      </div>
+   </body>
+</html>

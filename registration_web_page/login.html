@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Login</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+   </head>
+   <body>
+      <div class="mainheader">
+      <div class="login-form" style="border:solid 1.5px black;background-color: black;border-radius: 10px;">
+         <!-- <img src="logo1.png" alt="image"  class="center" style="display: block;margin-left: auto;margin-right: auto;width: 30%;height: 60%">-->
+         <div class="text">
+            LOGIN
+         </div>
+         <form method="post" action="account.php">
+            <div class="field">
+               <div class="fas fa-envelope"></div>
+               <input type="email" id = "mail" name = "mail" placeholder="Email">
+            </div>
+            <div class="field">
+               <div class="fas fa-lock"></div>
+               <input type="password" id = "pass" name = "pass" placeholder="Password">
+            </div>
+            <button name="Login">LOGIN</button>
+            <div class="link">
+               Not a member?
+               <a href="signup.html">Signup now</a>
+            </div>
+         </form>
+         <script>
+         window.onload = function () {
+            document.forms[0].onsubmit = function () {
+                var email = this.elements[0].value;
+                if (email == "") {
+                    alert("Please enter an Email-Id");
+                    return false;
+                }
+                var password = this.elements[1].value;
+                if (password == "") { 
+                    alert("Please enter the password");
+                    return false;
+                }
+                return true;
+            }
+        }  
+      </script>  
+      </div>
+   </div>
+   </body>
+</html>
